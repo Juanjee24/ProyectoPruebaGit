@@ -1,0 +1,135 @@
+:root{
+    --fuentePrincipal:'Roboto', sans-serif;
+    --fuenteSecundaria:'Lato', sans-serif;
+    --primario: #1073ba;
+    --secundario: #00da55;
+    --grid: #3b3b3b;
+    --blanco:#ffffff;
+    --negro: #1F1E1E;
+    --grisclaro: #e1e1e1;
+    --separacion:5rem;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /*1REM = 10px*/
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+/** Globales **/
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 900;
+    font-family: var(--fuenteSecundaria);
+    margin: calc( var(--separacion) / 2 ) 0 ;
+}
+h1 {
+    font-size: 4.4rem;
+}
+h2 {
+    font-size: 3.6rem;
+}
+h3 {
+    font-size: 2.8rem;
+}
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/** Utilidades **/
+.text-center {
+    text-align: center;
+}
+
+/* Header */ 
+.hero{
+    
+    background-color: var(--negro);
+    padding: 4rem 0;
+    color: var(--blanco);
+}
+.contenido-hero{
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .contenido-hero{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
+    .hero{
+        padding: calc(var(--separacion) * 3) 0; 
+       
+    }
+    
+}
+@media (min-width: 768px) { 
+    .imagen-header{
+        display: flex;
+        align-items: center;
+    }
+    
+}
+.hero img{
+    width: 100%;
+    
+    height: auto;
+    
+}
+.info-contenido{
+    padding-top: var(--separacion);
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+
+    
+}
+.info-contenido .titulo{
+    font-size: 6rem;
+    margin: 0;
+}
+@media (min-width: 768px) { 
+    .info-contenido{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0;
+        
+        
+    }
+    .info-contenido .titulo{
+        font-size: 10rem;
+    }
+}
+.info-contenido p{
+    font-size: 2rem;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 100;
+    line-height: 2.7rem;
+    margin: 0 0 2rem 0;
+}
+.info-contenido .h3-titulo{
+    font-size: 3rem;
+    
+}
+
+.info-contenido .precio span{
+    font-size: 6rem;
+    font-weight: bold;
+
+    
+}
+.precio{
+    margin-top: 4rem;
+}
